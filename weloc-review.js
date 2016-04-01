@@ -76,4 +76,3 @@ rl.on('line', function (cmd) {
 });
 
 rl.on('close', writeAndExit);
-process.on('SIGINT', writeAndExit);
