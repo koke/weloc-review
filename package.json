@@ -1,0 +1,14 @@
+{
+  "name": "weloc-review",
+  "version": "1.0.0",
+  "description": "Quick review tool for welocalize translation reviews",
+  "main": "weloc-review.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Bernal",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "xlsx": "^0.8.0"
+  }
+}
