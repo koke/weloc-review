@@ -38,7 +38,7 @@ var iter = makeIterator(pairs);
 function printNextOrDie(iter) {
   var next = iter.next()
   if (next.done) {
-    process.exit(0);
+    writeAndExit();
   }
   console.log("[%d/%d]\n%s\n%s", next.index + 1, iter.total, next.value[0], next.value[1]);
 }
