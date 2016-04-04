@@ -9,6 +9,8 @@ if(typeof require !== 'undefined') XLSX = require('xlsx');
 var workbook = XLSX.readFile(process.argv[2]);
 var sheet = workbook.Sheets[workbook.SheetNames[0]];
 var rows = sheet['!ref'].split(':')[1].match(/\d+/)[0]
+var Entities = require('html-entities').AllHtmlEntities;
+var entities = new Entities();
 
 var pairs = []
 for (var i = 8; i <= rows; i++) {
@@ -40,7 +42,7 @@ function printNextOrDie(iter) {
   if (next.done) {
     writeAndExit();
   }
-  console.log("[%d/%d]\n%s\n%s", next.index + 1, iter.total, next.value[0], next.value[1]);
+  console.log("[%d/%d]\n%s\n%s", next.index + 1, iter.total, entities.decode(next.value[0]), entities.decode(next.value[1]));
 }
 
 var comments = [];

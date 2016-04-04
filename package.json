@@ -9,6 +9,7 @@
   "author": "Jorge Bernal",
   "license": "GPL-2.0",
   "dependencies": {
+    "html-entities": "^1.2.0",
     "xlsx": "^0.8.0"
   }
 }
